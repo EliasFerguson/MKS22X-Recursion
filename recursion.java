@@ -16,4 +16,10 @@ public class recursion {
     if ((100 * Math.abs((check - orig) / orig)) < pc) return true;
     return false;
   }
+  public static int fib(int n) {
+    fibH(n, 0);
+  }
+  public static int fibH(int n, int fibCurrent) {
+    
+  }
 }
