@@ -20,6 +20,12 @@ public class recursion {
     fibH(n, 0);
   }
   public static int fibH(int n, int fibCurrent) {
-    
+    int prev
+    if (n == 0) return fibCurrent + 0;
+    else if (n == 1) return fibCurrent + 1;
+    else {
+      int prev = n - 1;
+      int prevprev = n - 2;
+    }
   }
 }
