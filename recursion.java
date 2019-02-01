@@ -2,7 +2,7 @@ import java.util.*;
 public class recursion {
   public static void main(String[] args) {
     System.out.println(sqrt(107));
-    System.out.println(fib(5));
+    System.out.println(fib(6));
   }
   public static double sqrt (double n) {
     return sqrtH(n, n, .001);
@@ -19,19 +19,21 @@ public class recursion {
     return false;
   }
   public static int fib(int n) {
-    return fibH(n, 0, n - 1, n - 2);
+    return fibH(n, 0, 0, 1);
   }
   public static int fibH(int n, int fibCurrent, int prev, int prevprev) {
     if (n == 0) return fibCurrent;
     else {
-      return fibH(n - 1, fibCurrent + prev + prevprev, n, prev);
+      return fibH(n - 1, prev + prevprev, prev + prevprev, prev);
     }
   }
+  /*
   public static ArrayList<Integer> makeAllSums(int n) {
     ArrayList<Integer> output = new ArrayList<Integer>();
     return makeAllSumsH(n, output);
   }
-  public static ArrayList<Integer> makeAllSums(int n, ArrayList<Integer> list) {
-    
-  }
+  public static ArrayList<Integer> makeAllSumsH(int n, ArrayList<Integer> list) {
+    if (n == 0) return list;
+    if ()
+  } */
 }
