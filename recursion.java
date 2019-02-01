@@ -18,15 +18,15 @@ public class recursion {
     return false;
   }
   public static int fib(int n) {
-    return fibH(n, 0);
+    return fibH(n, 0, n - 1, n - 2);
   }
-  public static int fibH(int n, int fibCurrent) {
+  public static int fibH(int n, int fibCurrent, int prev, int prevprev) {
     if (n == 0) return fibCurrent;
-    else if (n == 1) return fibCurrent + 1;
     else {
-      int prev = n - 1;
-      int prevprev = n - 2;
-      return fibH(n - 1, fibCurrent + prev + prevprev);
+      return fibH(n - 1, prev + prevprev, prev + prevprev, prev);
     }
   }
+  //public static ArrayList<Integer> makeAllSums() {
+
+  // }
 }
