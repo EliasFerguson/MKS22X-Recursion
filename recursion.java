@@ -1,6 +1,7 @@
 public class recursion {
   public static void main(String[] args) {
     System.out.println(sqrt(107));
+    System.out.println(fib(5));
   }
   public static double sqrt (double n) {
     return sqrtH(n, n, .001);
@@ -20,8 +21,8 @@ public class recursion {
     return fibH(n, 0);
   }
   public static int fibH(int n, int fibCurrent) {
-    if (n == 0) return 0;
-    else if (n == 1) return 1;
+    if (n == 0) return fibCurrent;
+    else if (n == 1) return fibCurrent + 1;
     else {
       int prev = n - 1;
       int prevprev = n - 2;
