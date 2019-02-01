@@ -23,7 +23,7 @@ public class recursion {
   public static int fibH(int n, int fibCurrent, int prev, int prevprev) {
     if (n == 0) return fibCurrent;
     else {
-      return fibH(n - 1, prev + prevprev, n, prev);
+      return fibH(n - 1, fibCurrent + prev + prevprev, n, prev);
     }
   }
   //public static ArrayList<Integer> makeAllSums() {
