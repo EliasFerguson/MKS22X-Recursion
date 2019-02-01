@@ -1,3 +1,4 @@
+import java.util.*;
 public class recursion {
   public static void main(String[] args) {
     System.out.println(sqrt(107));
@@ -26,7 +27,11 @@ public class recursion {
       return fibH(n - 1, fibCurrent + prev + prevprev, n, prev);
     }
   }
-  //public static ArrayList<Integer> makeAllSums() {
-
-  // }
+  public static ArrayList<Integer> makeAllSums(int n) {
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    return makeAllSumsH(n, output);
+  }
+  public static ArrayList<Integer> makeAllSums(int n, ArrayList<Integer> list) {
+    
+  }
 }
