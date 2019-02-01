@@ -17,15 +17,15 @@ public class recursion {
     return false;
   }
   public static int fib(int n) {
-    fibH(n, 0);
+    return fibH(n, 0);
   }
   public static int fibH(int n, int fibCurrent) {
-    int prev
-    if (n == 0) return fibCurrent + 0;
-    else if (n == 1) return fibCurrent + 1;
+    if (n == 0) return 0;
+    else if (n == 1) return 1;
     else {
       int prev = n - 1;
       int prevprev = n - 2;
+      return fibH(n - 1, fibCurrent + prev + prevprev);
     }
   }
 }
