@@ -27,13 +27,15 @@ public class recursion {
       return fibH(n - 1, prev + prevprev, prev + prevprev, prev);
     }
   }
-  /*
   public static ArrayList<Integer> makeAllSums(int n) {
     ArrayList<Integer> output = new ArrayList<Integer>();
-    return makeAllSumsH(n, output);
+    return makeAllSumsH(n, 0, output);
   }
-  public static ArrayList<Integer> makeAllSumsH(int n, ArrayList<Integer> list) {
+  public static void makeAllSumsH(int n, int sum, ArrayList<Integer> list) {
     if (n == 0) return list;
-    if ()
-  } */
+    else {
+      makeAllSumsH(n, currentSum + n, list);
+      makeAllSumsH(n, currentSum, list);
+    }
+  }
 }
