@@ -29,13 +29,14 @@ public class recursion {
   }
   public static ArrayList<Integer> makeAllSums(int n) {
     ArrayList<Integer> output = new ArrayList<Integer>();
-    return makeAllSumsH(n, 0, output);
+    makeAllSumsH(n, 0, output);
+    return output;
   }
   public static void makeAllSumsH(int n, int sum, ArrayList<Integer> list) {
-    if (n == 0) return list;
+    if (n == 0) list.add(sum);
     else {
-      makeAllSumsH(n, currentSum + n, list);
-      makeAllSumsH(n, currentSum, list);
+      makeAllSumsH(n, sum + n, list);
+      makeAllSumsH(n, sum, list);
     }
   }
 }
