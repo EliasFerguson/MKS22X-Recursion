@@ -35,8 +35,8 @@ public class recursion {
   public static void makeAllSumsH(int n, int sum, ArrayList<Integer> list) {
     if (n == 0) list.add(sum);
     else {
-      makeAllSumsH(n, sum + n, list);
-      makeAllSumsH(n, sum, list);
+      makeAllSumsH(n - 1, sum + n, list);
+      makeAllSumsH(n - 1, sum, list);
     }
   }
 }
