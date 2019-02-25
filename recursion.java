@@ -1,6 +1,7 @@
 import java.util.*;
 public class recursion {
   public static void main(String[] args) {
+    System.out.println(sqrt(2, .00001));
   }
   public static double sqrt (double n, double pc) {
     return sqrtH(n, n, pc);

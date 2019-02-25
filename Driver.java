@@ -1,11 +1,11 @@
 public class Driver {
   public static void main(String[] args) {
-    testFib(0);
-    testFib(1);
-    testFib(2);
-    testFib(3);
-    testFib(5);
-    testFib(20);
+    //testFib(0);
+    //testFib(1);
+    //testFib(2);
+    //testFib(3);
+    //testFib(5);
+    //testFib(20);
     testSqrt(0);
     testSqrt(1);
     testSqrt(2);
@@ -73,7 +73,10 @@ public static void testSqrt(int testcase){
     }
   }
 }
-public static boolean closeEnough(double ans, double correct) {
-  return (Math.abs(ans - correct) <= .00001);
+public static boolean closeEnough(double a, double b){
+  if(a==0.0 && b==0.0)return true;
+  if(a==0.0)return b < 0.00000000001;
+  if(b==0.0)return a < 0.00000000001;
+  return Math.abs(a-b)/a < 0.0001;//This is the normal % difference allowed
 }
 }
