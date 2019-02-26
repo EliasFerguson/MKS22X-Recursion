@@ -7,14 +7,15 @@ public class recursion {
     return sqrtH(n, n, pc);
   }
   public static double sqrtH(double n, double orig, double pc) {
+    if (n == 0) return 0;
     if (sqrtCheck(n, orig, pc)) return n;
     else {
-      return sqrtH(((orig / n + n) * .5), orig, pc);
+      return sqrtH((orig / n + n) * .5, orig, pc);
     }
   }
   public static boolean sqrtCheck(double n, double orig, double pc) {
     double check = n * n;
-    if ((100 * Math.abs((check - orig) / orig)) < pc) return true;
+    if (Math.abs((check - orig) / orig) <= pc) return true;
     return false;
   }
   public static int fib(int n) {
